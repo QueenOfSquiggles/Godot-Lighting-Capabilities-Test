@@ -1,0 +1,510 @@
+[gd_scene load_steps=41 format=3 uid="uid://covnedwabfq1u"]
+
+[ext_resource type="LightmapGIData" uid="uid://cncyvwg2x6f0j" path="res://baked_lighting/test_scene.lmbake" id="1_8goxr"]
+[ext_resource type="Script" path="res://TestSceneController.gd" id="1_dyodo"]
+[ext_resource type="PackedScene" uid="uid://cc1ms2t0td0ye" path="res://assets/terrain_low.gltf" id="1_g60je"]
+[ext_resource type="PackedScene" uid="uid://cv5e5435ot3ee" path="res://assets/terrain_low_curved.gltf" id="2_vviho"]
+[ext_resource type="PackedScene" uid="uid://cigsx07cojkk1" path="res://assets/terrain_mining.gltf" id="3_vromx"]
+[ext_resource type="PackedScene" uid="uid://cxa5alkubxxwj" path="res://assets/terrain_slope.gltf" id="4_tsll2"]
+[ext_resource type="PackedScene" uid="uid://cj6qjl4tcircu" path="res://assets/terrain_slope_inner_corner.gltf" id="5_cjkwd"]
+[ext_resource type="PackedScene" uid="uid://bawtx0tglx3p0" path="res://assets/terrain_slope_outer_corner.gltf" id="6_eg3er"]
+[ext_resource type="PackedScene" uid="uid://b3qtyeu44imm4" path="res://assets/terrain_tall.gltf" id="7_366o5"]
+[ext_resource type="PackedScene" uid="uid://cfjichfj610e3" path="res://assets/structure_tall.gltf" id="8_y1tks"]
+[ext_resource type="PackedScene" uid="uid://cu2iqnndtgijy" path="res://assets/roofmodule_solarpanels.gltf" id="9_t5gwd"]
+[ext_resource type="PackedScene" uid="uid://c0ymb7ryckqtp" path="res://assets/spacetruck.gltf" id="10_rfh2l"]
+[ext_resource type="PackedScene" uid="uid://c3j88exwp4bgi" path="res://assets/spacetruck_large.gltf" id="11_7lgtd"]
+[ext_resource type="PackedScene" uid="uid://btka4lugln2dc" path="res://assets/spacetruck_trailer.gltf" id="12_wlnus"]
+[ext_resource type="PackedScene" uid="uid://h0oguxr7lsue" path="res://assets/rocks_A.gltf" id="13_2tc8b"]
+[ext_resource type="PackedScene" uid="uid://b1mc6kc7xcxux" path="res://assets/rocks_B.gltf" id="14_jg74k"]
+[ext_resource type="PackedScene" uid="uid://chag82i675n0l" path="res://assets/rock_B.gltf" id="15_2ochg"]
+[ext_resource type="PackedScene" uid="uid://bartb465bso3m" path="res://assets/rock_A.gltf" id="16_yudtb"]
+[ext_resource type="PackedScene" uid="uid://bgldqe3jxmuhv" path="res://assets/landingpad_small.gltf" id="17_eaeqs"]
+[ext_resource type="PackedScene" uid="uid://c54yov1r7fagx" path="res://assets/lander_B.gltf" id="18_hg8ov"]
+[ext_resource type="PackedScene" uid="uid://cvapt4l6mgi3" path="res://assets/containers_A.gltf" id="19_hpeex"]
+[ext_resource type="PackedScene" uid="uid://mnl8o07dmgmm" path="res://assets/containers_B.gltf" id="20_eh1pe"]
+[ext_resource type="PackedScene" uid="uid://b7dwlgyn8yjth" path="res://assets/containers_C.gltf" id="21_8tdxm"]
+[ext_resource type="PackedScene" uid="uid://c540xsxbiu0p8" path="res://assets/containers_D.gltf" id="22_saltn"]
+[ext_resource type="PackedScene" uid="uid://h2ndtp7vqxtg" path="res://assets/drill_structure.gltf" id="23_shlk1"]
+[ext_resource type="PackedScene" uid="uid://dwgxg3423so6q" path="res://assets/cargo_B_stacked.gltf" id="24_k3gef"]
+[ext_resource type="PackedScene" uid="uid://xgssmhbfy602" path="res://assets/cargo_A_stacked.gltf" id="25_yps50"]
+[ext_resource type="PackedScene" uid="uid://joxi1ohdaqn3" path="res://assets/basemodule_garage.gltf" id="26_m6m0d"]
+[ext_resource type="PackedScene" uid="uid://bvsul67gefw18" path="res://assets/cargodepot_A.gltf" id="27_opr0w"]
+[ext_resource type="PackedScene" uid="uid://bxg6lb8k7hnqs" path="res://assets/basemodule_A.gltf" id="28_uytg3"]
+[ext_resource type="PackedScene" uid="uid://cjc6silpb53lx" path="res://assets/tunnel_straight_A.gltf" id="29_ordkt"]
+[ext_resource type="PackedScene" uid="uid://dp4k4767ldah7" path="res://assets/basemodule_D.gltf" id="30_u0p6u"]
+[ext_resource type="PackedScene" uid="uid://du00w04tnluga" path="res://assets/metalChunk.gltf" id="32_sshk7"]
+
+[sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_7sl06"]
+
+[sub_resource type="Sky" id="Sky_hhvcv"]
+sky_material = SubResource("PhysicalSkyMaterial_7sl06")
+
+[sub_resource type="Environment" id="Environment_k1338"]
+background_mode = 2
+sky = SubResource("Sky_hhvcv")
+tonemap_mode = 2
+ssr_enabled = true
+ssao_enabled = true
+ssil_enabled = true
+sdfgi_enabled = true
+glow_enabled = true
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.1405
+volumetric_fog_albedo = Color(1, 0.560784, 0.286275, 1)
+
+[sub_resource type="VoxelGIData" id="VoxelGIData_2qugx"]
+_data = {
+"bounds": AABB(-7.61192, -3.23773, -9.41129, 15.2238, 6.47546, 18.8226),
+"level_counts": PackedInt32Array(1, 0, 0, 0, 0, 0, 0, 0),
+"octree_cells": PackedByteArray(255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255),
+"octree_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"octree_df_png": PackedByteArray(137, 80, 78, 71, 13, 10, 26, 10, 0, 0, 0, 13, 73, 72, 68, 82, 0, 0, 32, 0, 0, 0, 0, 128, 8, 0, 0, 0, 0, 134, 204, 184, 193, 0, 0, 0, 1, 115, 82, 71, 66, 0, 174, 206, 28, 233, 0, 0, 5, 77, 73, 68, 65, 84, 120, 156, 237, 218, 49, 13, 0, 32, 0, 192, 48, 192, 191, 103, 16, 193, 65, 88, 90, 5, 19, 176, 185, 7, 0, 0, 0, 0, 0, 0, 0, 240, 187, 245, 58, 0, 0, 0, 0, 0, 0, 0, 0, 184, 103, 0, 0, 0, 0, 0, 0, 0, 0, 128, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 4, 24, 0, 0, 0, 0, 0, 0, 0, 0, 32, 192, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 6, 0, 0, 0, 0, 0, 0, 0, 0, 8, 48, 0, 0, 0, 0, 0, 0, 0, 0, 64, 128, 1, 0, 0, 0, 0, 0, 0, 0, 0, 2, 12, 0, 0, 0, 0, 0, 0, 0, 0, 16, 96, 0, 0, 0, 0, 0, 0, 0, 0, 128, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 4, 24, 0, 0, 0, 0, 0, 0, 0, 0, 32, 192, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 6, 0, 0, 0, 0, 0, 0, 0, 0, 8, 48, 0, 0, 0, 0, 0, 0, 0, 0, 64, 128, 1, 0, 0, 0, 0, 0, 0, 0, 0, 2, 12, 0, 0, 0, 0, 0, 0, 0, 0, 16, 96, 0, 0, 0, 0, 0, 0, 0, 0, 128, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 4, 24, 0, 0, 0, 0, 0, 0, 0, 0, 32, 192, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 6, 0, 0, 0, 0, 0, 0, 0, 0, 8, 48, 0, 0, 0, 0, 0, 0, 0, 0, 64, 128, 1, 0, 0, 0, 0, 0, 0, 0, 0, 2, 12, 0, 0, 0, 0, 0, 0, 0, 0, 16, 96, 0, 0, 0, 0, 0, 0, 0, 0, 128, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 4, 24, 0, 0, 0, 0, 0, 0, 0, 0, 32, 192, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 6, 0, 0, 0, 0, 0, 0, 0, 0, 8, 48, 0, 0, 0, 0, 0, 0, 0, 0, 64, 128, 1, 0, 0, 0, 0, 0, 0, 0, 0, 2, 12, 0, 0, 0, 0, 0, 0, 0, 0, 16, 96, 0, 0, 0, 0, 0, 0, 0, 0, 128, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 4, 24, 0, 0, 0, 0, 0, 0, 0, 0, 32, 192, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 6, 0, 0, 0, 0, 0, 0, 0, 0, 8, 48, 0, 0, 0, 0, 0, 0, 0, 0, 64, 128, 1, 0, 0, 0, 0, 0, 0, 0, 0, 2, 12, 0, 0, 0, 0, 0, 0, 0, 0, 16, 96, 0, 0, 0, 0, 0, 0, 0, 0, 128, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 4, 24, 0, 0, 0, 0, 0, 0, 0, 0, 32, 192, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 6, 0, 0, 0, 0, 0, 0, 0, 0, 8, 48, 0, 0, 0, 0, 0, 0, 0, 0, 64, 128, 1, 0, 0, 0, 0, 0, 0, 0, 0, 2, 12, 0, 0, 0, 0, 0, 0, 0, 0, 16, 96, 0, 0, 0, 0, 0, 0, 0, 0, 128, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 4, 24, 0, 0, 0, 0, 0, 0, 0, 0, 32, 192, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 6, 0, 0, 0, 0, 0, 0, 0, 0, 8, 48, 0, 0, 0, 0, 0, 0, 0, 0, 64, 128, 1, 0, 0, 0, 0, 0, 0, 0, 0, 2, 12, 0, 0, 0, 0, 0, 0, 0, 0, 16, 96, 0, 0, 0, 0, 0, 0, 0, 0, 128, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 4, 24, 0, 0, 0, 0, 0, 0, 0, 0, 32, 192, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 6, 0, 0, 0, 0, 0, 0, 0, 0, 8, 48, 0, 0, 0, 0, 0, 0, 0, 0, 64, 128, 1, 0, 0, 0, 0, 0, 0, 0, 0, 2, 12, 0, 0, 0, 0, 0, 0, 0, 0, 16, 96, 0, 0, 0, 0, 0, 0, 0, 0, 128, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 4, 24, 0, 0, 0, 0, 0, 0, 0, 0, 32, 192, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 6, 0, 0, 0, 0, 0, 0, 0, 0, 8, 48, 0, 0, 0, 0, 0, 0, 0, 0, 64, 128, 1, 0, 0, 0, 0, 0, 0, 0, 0, 2, 12, 0, 0, 0, 0, 0, 0, 0, 0, 16, 96, 0, 0, 0, 0, 0, 0, 0, 0, 128, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 4, 24, 0, 0, 0, 0, 0, 0, 0, 0, 32, 192, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 6, 0, 0, 0, 0, 0, 0, 0, 0, 8, 48, 0, 0, 0, 0, 0, 0, 0, 0, 64, 128, 1, 0, 0, 0, 0, 0, 0, 0, 0, 2, 12, 0, 0, 0, 0, 0, 0, 0, 0, 16, 96, 0, 0, 0, 0, 0, 0, 0, 0, 128, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 4, 24, 0, 0, 0, 0, 0, 0, 0, 0, 32, 192, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 6, 0, 0, 0, 0, 0, 0, 0, 0, 8, 48, 0, 0, 0, 0, 0, 0, 0, 0, 64, 128, 1, 0, 0, 0, 0, 0, 0, 0, 0, 2, 12, 0, 0, 0, 0, 0, 0, 0, 0, 16, 96, 0, 0, 0, 0, 0, 0, 0, 0, 128, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 4, 24, 0, 0, 0, 0, 0, 0, 0, 0, 32, 192, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 6, 0, 0, 0, 0, 0, 0, 0, 0, 8, 48, 0, 0, 0, 0, 0, 0, 0, 0, 64, 128, 1, 0, 0, 0, 0, 0, 0, 0, 0, 2, 12, 0, 0, 0, 0, 0, 0, 0, 0, 16, 96, 0, 0, 0, 0, 0, 0, 0, 0, 128, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 4, 24, 0, 0, 0, 0, 0, 0, 0, 0, 32, 192, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 6, 0, 0, 0, 0, 0, 0, 0, 0, 8, 48, 0, 0, 0, 0, 0, 0, 0, 0, 64, 128, 1, 0, 0, 0, 0, 0, 0, 0, 0, 2, 12, 0, 0, 0, 0, 0, 0, 0, 0, 16, 96, 0, 0, 0, 0, 0, 0, 0, 0, 128, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 4, 24, 0, 0, 0, 0, 0, 0, 0, 0, 32, 192, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 6, 0, 0, 0, 0, 0, 0, 0, 0, 8, 48, 0, 0, 0, 0, 0, 0, 0, 0, 64, 128, 1, 0, 0, 0, 0, 0, 0, 0, 0, 2, 12, 0, 0, 0, 0, 0, 0, 0, 0, 16, 96, 0, 0, 0, 0, 0, 0, 0, 0, 128, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 4, 24, 0, 0, 0, 0, 0, 0, 0, 0, 32, 192, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 6, 0, 0, 0, 0, 0, 0, 0, 0, 8, 48, 0, 0, 0, 0, 0, 0, 0, 0, 64, 128, 1, 0, 0, 0, 0, 0, 0, 0, 0, 2, 12, 0, 0, 0, 0, 0, 0, 0, 0, 16, 96, 0, 0, 0, 0, 0, 0, 0, 0, 128, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 4, 24, 0, 0, 0, 0, 0, 0, 0, 0, 32, 192, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 6, 0, 0, 0, 0, 0, 0, 0, 0, 8, 48, 0, 0, 0, 0, 0, 0, 0, 0, 64, 192, 1, 39, 31, 1, 255, 252, 57, 104, 57, 0, 0, 0, 0, 73, 69, 78, 68, 174, 66, 96, 130),
+"octree_size": Vector3(128, 64, 128),
+"to_cell_xform": Transform3D(6.80034, 0, 0, 0, 6.80034, 0, 0, 0, 6.80034, 51.7636, 22.0177, 64)
+}
+dynamic_range = 8.0
+
+[sub_resource type="Animation" id="Animation_5lwhh"]
+resource_name = "DemoSequence"
+length = 15.0
+loop_mode = 1
+step = 1.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Animation/Camera3D:rotation")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, -2.18143, 0), Vector3(0, -1.62591, 0), Vector3(0, -0.727907, 0), Vector3(0, 0.024138, 0), Vector3(-0.536514, 0.024138, -1.08357e-09)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Animation/Camera3D:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-6.416, 1.444, -10.889), Vector3(-5.34786, 1.444, -9.49827), Vector3(-5.10641, 1.444, -6.79917), Vector3(-4.99978, 1.444, -2.38271), Vector3(-4.88286, 4.12616, 2.46016)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Animation/Camera3D:fov")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2, 3, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [30.0, 30.0, 70.0, 30.0]
+}
+
+[sub_resource type="Animation" id="Animation_x0qji"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Animation/Camera3D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, -2.18143, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Animation/Camera3D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-6.416, 1.444, -10.889)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Animation/Camera3D:fov")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [30.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8mmt1"]
+_data = {
+"DemoSequence": SubResource("Animation_5lwhh"),
+"RESET": SubResource("Animation_x0qji")
+}
+
+[node name="TestScene" type="Node3D" node_paths=PackedStringArray("reflection_probes")]
+script = ExtResource("1_dyodo")
+reflection_probes = [NodePath("LightConfigurations/MainReflectionProbe"), NodePath("LightConfigurations/SubProbeSouth"), NodePath("LightConfigurations/SubProbeCenter"), NodePath("LightConfigurations/North")]
+
+[node name="LightConfigurations" type="Node3D" parent="."]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="LightConfigurations"]
+transform = Transform3D(-0.123848, -0.610867, 0.781987, -0.150101, 0.790519, 0.593759, -0.980883, -0.0438411, -0.189596, -3.91372, 0, -1.36563)
+light_bake_mode = 1
+shadow_enabled = true
+directional_shadow_blend_splits = true
+directional_shadow_max_distance = 20.0
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="LightConfigurations"]
+environment = SubResource("Environment_k1338")
+
+[node name="LightmapGI" type="LightmapGI" parent="LightConfigurations"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 0)
+quality = 3
+bounces = 8
+directional = true
+generate_probes_subdiv = 4
+light_data = ExtResource("1_8goxr")
+
+[node name="VoxelGI" type="VoxelGI" parent="LightConfigurations"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.75449, 1.31109, -1.96664)
+size = Vector3(15.2238, 6.47546, 18.8226)
+data = SubResource("VoxelGIData_2qugx")
+
+[node name="MainReflectionProbe" type="ReflectionProbe" parent="LightConfigurations"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.87173, 1.46446, -2.16449)
+size = Vector3(11.6896, 4.64738, 17.9742)
+enable_shadows = true
+
+[node name="SubProbeSouth" type="ReflectionProbe" parent="LightConfigurations"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.87173, 1.46446, -7.16449)
+size = Vector3(11.6896, 4.64738, 6)
+enable_shadows = true
+
+[node name="SubProbeCenter" type="ReflectionProbe" parent="LightConfigurations"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.87173, 1.46446, -1.16449)
+size = Vector3(11.6896, 4.64738, 6)
+enable_shadows = true
+
+[node name="North" type="ReflectionProbe" parent="LightConfigurations"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.87173, 1.46446, 3.83551)
+size = Vector3(11.6896, 4.64738, 6)
+enable_shadows = true
+
+[node name="LevelGeometry" type="Node3D" parent="LightConfigurations"]
+
+[node name="terrain_low" parent="LightConfigurations/LevelGeometry" instance=ExtResource("1_g60je")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -2)
+
+[node name="terrain_low2" parent="LightConfigurations/LevelGeometry" instance=ExtResource("1_g60je")]
+
+[node name="terrain_low_curved" parent="LightConfigurations/LevelGeometry" instance=ExtResource("2_vviho")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2, 0, 0)
+
+[node name="terrain_mining" parent="LightConfigurations/LevelGeometry" instance=ExtResource("3_vromx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+
+[node name="terrain_slope" parent="LightConfigurations/LevelGeometry" instance=ExtResource("4_tsll2")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -2, 0, 0)
+
+[node name="terrain_slope2" parent="LightConfigurations/LevelGeometry" instance=ExtResource("4_tsll2")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2, 0, -4)
+
+[node name="terrain_slope_inner_corner" parent="LightConfigurations/LevelGeometry" instance=ExtResource("5_cjkwd")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2, 0, -2)
+
+[node name="terrain_slope_inner_corner3" parent="LightConfigurations/LevelGeometry" instance=ExtResource("5_cjkwd")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2, 0, 2)
+
+[node name="terrain_slope_outer_corner" parent="LightConfigurations/LevelGeometry" instance=ExtResource("6_eg3er")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, -2)
+
+[node name="terrain_slope_inner_corner2" parent="LightConfigurations/LevelGeometry" instance=ExtResource("5_cjkwd")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, -4)
+
+[node name="terrain_tall" parent="LightConfigurations/LevelGeometry" instance=ExtResource("7_366o5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -2)
+
+[node name="terrain_tall2" parent="LightConfigurations/LevelGeometry" instance=ExtResource("7_366o5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -4)
+
+[node name="terrain_tall3" parent="LightConfigurations/LevelGeometry" instance=ExtResource("7_366o5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -4)
+
+[node name="terrain_tall4" parent="LightConfigurations/LevelGeometry" instance=ExtResource("7_366o5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -4)
+
+[node name="terrain_tall5" parent="LightConfigurations/LevelGeometry" instance=ExtResource("7_366o5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -2)
+
+[node name="terrain_tall6" parent="LightConfigurations/LevelGeometry" instance=ExtResource("7_366o5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 0)
+
+[node name="terrain_tall7" parent="LightConfigurations/LevelGeometry" instance=ExtResource("7_366o5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -4)
+
+[node name="terrain_tall8" parent="LightConfigurations/LevelGeometry" instance=ExtResource("7_366o5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -2)
+
+[node name="terrain_tall9" parent="LightConfigurations/LevelGeometry" instance=ExtResource("7_366o5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 0)
+
+[node name="terrain_tall10" parent="LightConfigurations/LevelGeometry" instance=ExtResource("7_366o5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -4)
+
+[node name="terrain_tall13" parent="LightConfigurations/LevelGeometry" instance=ExtResource("7_366o5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -6)
+
+[node name="terrain_tall14" parent="LightConfigurations/LevelGeometry" instance=ExtResource("7_366o5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -6)
+
+[node name="terrain_tall15" parent="LightConfigurations/LevelGeometry" instance=ExtResource("7_366o5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -6)
+
+[node name="terrain_tall16" parent="LightConfigurations/LevelGeometry" instance=ExtResource("7_366o5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -6)
+
+[node name="terrain_tall17" parent="LightConfigurations/LevelGeometry" instance=ExtResource("7_366o5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -6)
+
+[node name="terrain_tall18" parent="LightConfigurations/LevelGeometry" instance=ExtResource("7_366o5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -8)
+
+[node name="terrain_tall19" parent="LightConfigurations/LevelGeometry" instance=ExtResource("7_366o5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -8)
+
+[node name="terrain_tall20" parent="LightConfigurations/LevelGeometry" instance=ExtResource("7_366o5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -8)
+
+[node name="terrain_tall21" parent="LightConfigurations/LevelGeometry" instance=ExtResource("7_366o5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -8)
+
+[node name="terrain_tall22" parent="LightConfigurations/LevelGeometry" instance=ExtResource("7_366o5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -8)
+
+[node name="terrain_tall23" parent="LightConfigurations/LevelGeometry" instance=ExtResource("7_366o5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -10)
+
+[node name="terrain_tall24" parent="LightConfigurations/LevelGeometry" instance=ExtResource("7_366o5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -10)
+
+[node name="terrain_tall25" parent="LightConfigurations/LevelGeometry" instance=ExtResource("7_366o5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -10)
+
+[node name="terrain_tall26" parent="LightConfigurations/LevelGeometry" instance=ExtResource("7_366o5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -10)
+
+[node name="terrain_tall27" parent="LightConfigurations/LevelGeometry" instance=ExtResource("7_366o5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -10)
+
+[node name="terrain_tall29" parent="LightConfigurations/LevelGeometry" instance=ExtResource("7_366o5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 2)
+
+[node name="terrain_tall30" parent="LightConfigurations/LevelGeometry" instance=ExtResource("7_366o5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 2)
+
+[node name="terrain_tall31" parent="LightConfigurations/LevelGeometry" instance=ExtResource("7_366o5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 2)
+
+[node name="terrain_tall32" parent="LightConfigurations/LevelGeometry" instance=ExtResource("7_366o5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 2)
+
+[node name="terrain_tall33" parent="LightConfigurations/LevelGeometry" instance=ExtResource("7_366o5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 4)
+
+[node name="terrain_tall34" parent="LightConfigurations/LevelGeometry" instance=ExtResource("7_366o5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 4)
+
+[node name="terrain_tall35" parent="LightConfigurations/LevelGeometry" instance=ExtResource("7_366o5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 4)
+
+[node name="terrain_tall36" parent="LightConfigurations/LevelGeometry" instance=ExtResource("7_366o5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 4)
+
+[node name="terrain_tall37" parent="LightConfigurations/LevelGeometry" instance=ExtResource("7_366o5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 4)
+
+[node name="terrain_tall38" parent="LightConfigurations/LevelGeometry" instance=ExtResource("7_366o5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 6)
+
+[node name="terrain_tall39" parent="LightConfigurations/LevelGeometry" instance=ExtResource("7_366o5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 6)
+
+[node name="terrain_tall40" parent="LightConfigurations/LevelGeometry" instance=ExtResource("7_366o5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 6)
+
+[node name="terrain_tall41" parent="LightConfigurations/LevelGeometry" instance=ExtResource("7_366o5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 6)
+
+[node name="terrain_tall42" parent="LightConfigurations/LevelGeometry" instance=ExtResource("7_366o5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 6)
+
+[node name="terrain_tall11" parent="LightConfigurations/LevelGeometry" instance=ExtResource("7_366o5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -2)
+
+[node name="terrain_tall12" parent="LightConfigurations/LevelGeometry" instance=ExtResource("7_366o5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 0)
+
+[node name="structure_tall" parent="LightConfigurations/LevelGeometry" instance=ExtResource("8_y1tks")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 1.00782, -6)
+
+[node name="roofmodule_solarpanels" parent="LightConfigurations/LevelGeometry" instance=ExtResource("9_t5gwd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 3, -6)
+
+[node name="spacetruck" parent="LightConfigurations/LevelGeometry" instance=ExtResource("10_rfh2l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1.0857, -4)
+
+[node name="spacetruck_large" parent="LightConfigurations/LevelGeometry" instance=ExtResource("11_7lgtd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1.14137, -8)
+
+[node name="spacetruck_trailer" parent="LightConfigurations/LevelGeometry" instance=ExtResource("12_wlnus")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1.15094, -9)
+
+[node name="spacetruck_trailer2" parent="LightConfigurations/LevelGeometry" instance=ExtResource("12_wlnus")]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, -4.4, 1.15094, -10)
+
+[node name="rocks_A" parent="LightConfigurations/LevelGeometry" instance=ExtResource("13_2tc8b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1.00782, 0)
+
+[node name="rocks_B" parent="LightConfigurations/LevelGeometry" instance=ExtResource("14_jg74k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 1.00788, -2)
+
+[node name="rock_B" parent="LightConfigurations/LevelGeometry" instance=ExtResource("15_2ochg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 1, 1)
+
+[node name="rock_A" parent="LightConfigurations/LevelGeometry" instance=ExtResource("16_yudtb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1, 3)
+
+[node name="landingpad_small" parent="LightConfigurations/LevelGeometry" instance=ExtResource("17_eaeqs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 1, 2)
+
+[node name="lander_B" parent="LightConfigurations/LevelGeometry" instance=ExtResource("18_hg8ov")]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, -7, 1.4, 2)
+
+[node name="containers_A" parent="LightConfigurations/LevelGeometry" instance=ExtResource("19_hpeex")]
+transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, -5.6, 1.3, 4.4)
+
+[node name="containers_B" parent="LightConfigurations/LevelGeometry" instance=ExtResource("20_eh1pe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.4, 2.1, 5.5)
+
+[node name="containers_C" parent="LightConfigurations/LevelGeometry" instance=ExtResource("21_8tdxm")]
+transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, -4.4, 1.1, 4.7)
+
+[node name="containers_D" parent="LightConfigurations/LevelGeometry" instance=ExtResource("22_saltn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.6, 1.1, 4.4)
+
+[node name="drill_structure" parent="LightConfigurations/LevelGeometry" instance=ExtResource("23_shlk1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1, 0)
+
+[node name="cargo_B_stacked" parent="LightConfigurations/LevelGeometry" instance=ExtResource("24_k3gef")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 1, -4)
+
+[node name="cargo_A_stacked" parent="LightConfigurations/LevelGeometry" instance=ExtResource("25_yps50")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 1, -3)
+
+[node name="cargo_A_stacked2" parent="LightConfigurations/LevelGeometry" instance=ExtResource("25_yps50")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 1, -4)
+
+[node name="basemodule_garage" parent="LightConfigurations/LevelGeometry" instance=ExtResource("26_m6m0d")]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, -7, 1, -9)
+
+[node name="cargodepot_A" parent="LightConfigurations/LevelGeometry" instance=ExtResource("27_opr0w")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5, 1, 5)
+
+[node name="basemodule_A" parent="LightConfigurations/LevelGeometry" instance=ExtResource("28_uytg3")]
+transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, -1, 1, -3)
+
+[node name="tunnel_straight_A" parent="LightConfigurations/LevelGeometry" instance=ExtResource("29_ordkt")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1, 1, -5)
+
+[node name="basemodule_D" parent="LightConfigurations/LevelGeometry" instance=ExtResource("30_u0p6u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, -7)
+
+[node name="metalChunk" parent="LightConfigurations/LevelGeometry" instance=ExtResource("32_sshk7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1, -6)
+
+[node name="metalChunk2" parent="LightConfigurations/LevelGeometry" instance=ExtResource("32_sshk7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 1, -2)
+
+[node name="metalChunk3" parent="LightConfigurations/LevelGeometry" instance=ExtResource("32_sshk7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 1, 4)
+
+[node name="metalChunk4" parent="LightConfigurations/LevelGeometry" instance=ExtResource("32_sshk7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 1, 1)
+
+[node name="metalChunk5" parent="LightConfigurations/LevelGeometry" instance=ExtResource("32_sshk7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 1, 5)
+
+[node name="metalChunk6" parent="LightConfigurations/LevelGeometry" instance=ExtResource("32_sshk7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, -9)
+
+[node name="metalChunk7" parent="LightConfigurations/LevelGeometry" instance=ExtResource("32_sshk7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 1, -8)
+
+[node name="Animation" type="Node3D" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="Animation"]
+transform = Transform3D(-0.0550895, 0, -0.998481, 0, 1, 0, 0.998481, 0, -0.0550895, -5.34786, 1.444, -9.49827)
+current = true
+fov = 30.0
+far = 15.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Animation"]
+root_node = NodePath("../..")
+autoplay = "DemoSequence"
+libraries = {
+"": SubResource("AnimationLibrary_8mmt1")
+}
+
+[node name="GraphicsOptionsGUI" type="PanelContainer" parent="."]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -31.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GraphicsOptionsGUI"]
+layout_mode = 2
+theme_override_constants/separation = 32
+alignment = 1
+
+[node name="SDFGI" type="CheckBox" parent="GraphicsOptionsGUI/HBoxContainer"]
+layout_mode = 2
+button_pressed = true
+text = "SDFGI"
+
+[node name="VoxelGI" type="CheckBox" parent="GraphicsOptionsGUI/HBoxContainer"]
+layout_mode = 2
+button_pressed = true
+text = "VoxelGI"
+
+[node name="LightmapGI" type="CheckBox" parent="GraphicsOptionsGUI/HBoxContainer"]
+layout_mode = 2
+button_pressed = true
+text = "LightmapGI"
+
+[node name="ReflectionProbes" type="CheckBox" parent="GraphicsOptionsGUI/HBoxContainer"]
+layout_mode = 2
+button_pressed = true
+text = "Reflection Probes"
+
+[node name="PausePlay" type="Button" parent="GraphicsOptionsGUI/HBoxContainer"]
+layout_mode = 2
+text = "Toggle Pause Play"
+
+[connection signal="toggled" from="GraphicsOptionsGUI/HBoxContainer/SDFGI" to="." method="_on_sdfgi_toggled"]
+[connection signal="toggled" from="GraphicsOptionsGUI/HBoxContainer/VoxelGI" to="." method="_on_voxel_gi_toggled"]
+[connection signal="toggled" from="GraphicsOptionsGUI/HBoxContainer/LightmapGI" to="." method="_on_lightmap_gi_toggled"]
+[connection signal="toggled" from="GraphicsOptionsGUI/HBoxContainer/ReflectionProbes" to="." method="_on_reflection_probes_toggled"]
+[connection signal="pressed" from="GraphicsOptionsGUI/HBoxContainer/PausePlay" to="." method="_on_pause_play_pressed"]
